@@ -43,5 +43,41 @@ Nombrearchivo.module.scss (esto es una regla que pide react), y se utilizada de 
 
 `<div className={classes.main}> Hola mundo </div>`
 
+### `Snipets para vscode`
 
-### Este documento sigue en desarrollo...
+vscode nos ofrece crear snippets para la generación de código rápido, entonces como buena práctica se propone ir creando los estándares GUX y esas estructuras repetitivas, guardarlas en un snippet y asi solo escribirlo y generar el código, como por ejemplo en los componentes.
+
+#### `Functional compoent con patron Redux connect`
+
+``` "Create Page Function Component": {"
+    "prefix": "cra-comp-redux",
+    "body": [
+    "import React from 'react';",
+    "import { connect } from 'react-redux';",
+    "import { Dispatch } from 'redux';",
+    "import classes from './$1.module.scss';",
+
+      "const $1 = () => {",
+      "return <div className={classes.main}>$1</div>;",
+      "};",
+
+      "const mapStateToProps = (state: any) => {",
+      "return {};",
+      "};",
+
+      "const mapDispatchToProps = (dispatch: Dispatch) => {",
+      "return {};",
+      "};",
+
+      "export default connect(mapStateToProps, mapDispatchToProps)($1);"
+    ]
+  }
+```
+
+### Plugins Recomendados para vsCode
+
+* Para los Ducks en redux recomiendo este plugin, crea toda la estructura del duck, solo le debes pasar el nombre y despues los actions, esta bastante bueno
+
+  * https://marketplace.visualstudio.com/items?itemName=Bespohk.ducks-typescript-generator
+
+### Este documento sigue en desarrollo
