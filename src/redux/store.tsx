@@ -1,17 +1,18 @@
-import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { authReducer } from './reducers/authReducer';
-import thunk from 'redux-thunk';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunkMiddleware from 'redux-thunk';
 
-declare global {
-    interface Window {
-        __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose;
-    }
+import * as reducers from './ducks';
+
+let middleware: any;
+
+if (process.env.NODE_ENV !== 'production') {
+    middleware = composeWithDevTools(applyMiddleware(thunkMiddleware));
+} else {
+    middleware = applyMiddleware(thunkMiddleware);
 }
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-const reducers = combineReducers({
-    auth: authReducer,
-});
-
-export const store = createStore(reducers, composeEnhancers(applyMiddleware(thunk)));
+// tslint:disable-next-line: typedef
+export default function configureStore() {
+    return createStore(combineReducers(reducers), middleware);
+}
