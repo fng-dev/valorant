@@ -36,12 +36,18 @@ export default function reducer(state = initialState, action: Action) {
 // Action Creators
 
 export function login(username: any, password: any) {
+
+    const returnApi = {
+        isLogged: true,
+        token: 'lkjafads87hpjlasdf87523hiuiHiojsdflkjafads87hpjlasdf87523hiuiHiojsdf',
+        user: {
+            name: 'Franco',
+            role: 'developer'
+        },
+    };
     return {
         type: Types.LOGIN,
-        payload: {
-            username,
-            password
-        },
+        payload: returnApi,
     }
 }
 

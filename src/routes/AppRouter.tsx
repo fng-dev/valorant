@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import Home from '../pages/Home/Home';
 import Login from '../pages/Auth/Login/Login';
 import Register from '../pages/Auth/Register/Register';
+import Example from '../pages/ReduxExample/ReduxExample';
 
 export const AppRouter = () => {
     return (
@@ -12,6 +13,7 @@ export const AppRouter = () => {
                 <Switch>
                     <Route path="/login" component={Login} />
                     <Route path="/register" component={Register} />
+                    <Route path="/redux" component={Example} />
 
                     <Route exact path="/" component={Home} />
 

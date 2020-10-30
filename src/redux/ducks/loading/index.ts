@@ -21,9 +21,9 @@ const initialState = {
 export default function reducer(state = initialState, action: Action) {
     switch (action.type) {
         case Types.ON:
-            return { ...action.payload};
+            return { ...action.payload };
         case Types.OFF:
-            return { ...initialState };
+            return { ...action.payload };
         default:
             return state;
     }
@@ -31,12 +31,11 @@ export default function reducer(state = initialState, action: Action) {
 
 // Action Creators
 
-export function turnOn(username: any, password: any) {
+export function turnOn() {
     return {
         type: Types.ON,
         payload: {
-            username,
-            password
+            isLoading: true
         },
     }
 }
@@ -44,5 +43,8 @@ export function turnOn(username: any, password: any) {
 export function turnOff() {
     return {
         type: Types.OFF,
+        payload: {
+            isLoading: false
+        }
     }
 }
