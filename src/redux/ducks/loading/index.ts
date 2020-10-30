@@ -4,29 +4,25 @@ interface Action {
 }
 
 interface Payload {
-    isLogged: boolean,
-    token: string,
-    user: object,
+    isLoading: boolean,
 }
 
 export const Types = {
-    LOGIN: 'AUTH_LOGIN',
-    LOGOUT: 'AUTH_LOGOUT',
+    ON: 'LOADING_ON',
+    OFF: 'LOADING_OFF',
 };
 
 // Reducer
 
 const initialState = {
-    isLogged: false,
-    token: null,
-    user: {},
+    isLoading: false,
 };
 
 export default function reducer(state = initialState, action: Action) {
     switch (action.type) {
-        case Types.LOGIN:
+        case Types.ON:
             return { ...action.payload};
-        case Types.LOGOUT:
+        case Types.OFF:
             return { ...initialState };
         default:
             return state;
@@ -35,9 +31,9 @@ export default function reducer(state = initialState, action: Action) {
 
 // Action Creators
 
-export function login(username: any, password: any) {
+export function turnOn(username: any, password: any) {
     return {
-        type: Types.LOGIN,
+        type: Types.ON,
         payload: {
             username,
             password
@@ -45,8 +41,8 @@ export function login(username: any, password: any) {
     }
 }
 
-export function logout() {
+export function turnOff() {
     return {
-        type: Types.LOGOUT,
+        type: Types.OFF,
     }
 }
