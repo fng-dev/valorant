@@ -1,0 +1,68 @@
+.menuTop {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .effect {
+        position: absolute;
+        background-color: #000;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        left: 0;
+        top: 0;
+    }
+    .rrss,
+    .login {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: #fff;
+        svg {
+            margin: 0 5px;
+        }
+    }
+    .login {
+        width: 90px;
+        background-image: url('../../assets/imgs/bg-btn-2.png');
+        background-size: cover;
+        position: relative;
+        border-radius: 2px;
+        font-weight: bold;
+        cursor: pointer;
+
+        svg {
+            font-size: 1.2em;
+            font-weight: 300;
+            margin: 0;
+            padding: 2px;
+        }
+
+        .line {
+            position: absolute;
+            max-height: 7px;
+            height: 7px;
+            width: 100%;
+            background-color: #000;
+            bottom: 0;
+            left: 0;
+            opacity: .2;
+            transition: max-height 0.15s ease-in;
+        }
+        .text {
+            position: relative;
+        }
+    }
+    .login:hover>.line {
+        max-height: 100%;
+        height: 100%;
+        opacity: .1;
+    }
+}
