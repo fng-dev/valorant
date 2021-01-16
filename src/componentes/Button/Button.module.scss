@@ -1,0 +1,72 @@
+.container {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+
+    .effect {
+        width: 100%;
+        height: 0%;
+        position: absolute;
+        background-color: #000;
+        opacity: 0;
+        transition: opacity .23s, height .23s ease-out;
+        bottom: 0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px 25px;
+        border-bottom: 4px solid brown;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 1.7em;
+        cursor: pointer;
+    }
+}
+
+.containerLeft {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+
+    .effect {
+        width: 100%;
+        height: 0%;
+        position: absolute;
+        background-color: #000;
+        opacity: 0;
+        transition: opacity .23s, height .23s ease-out;
+        bottom: 0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7em;
+        background-color: red;
+        border: 0;
+        border-radius: 5px;
+        padding: 10px 25px;
+        border-bottom: 4px solid brown;
+        color: #FFF;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+    }
+}
+
+.container:hover > .effect{
+    opacity: .2;
+    height: 100%;
+}

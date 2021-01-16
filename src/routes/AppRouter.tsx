@@ -1,16 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
-
-import Main from '../Template/Main';
-// import Example from '../pages/ReduxExample/ReduxExample';
+import Home from '../pages/Home/Home'
 
 export const AppRouter = () => {
     return (
         <Router>
             <div>
                 <Switch>
-                    <Route exact path="/" component={() => <Main> <>Franco</> </Main>} />
-                    <Redirect to="/home" />
+                    <Route exact path="/" component={Home} />
+                    <Redirect to="/" />
                 </Switch>
             </div>
         </Router>

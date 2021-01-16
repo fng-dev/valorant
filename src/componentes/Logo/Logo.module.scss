@@ -20,6 +20,11 @@
             font-size: 1.3em;
             position: relative;
         }
+
+        @media(max-width: 500px) {
+            width: 80%;
+            margin-bottom: 0;
+        }
     }
 
     .subtitle {
@@ -33,5 +38,10 @@
         font-weight: 500;
         font-style: italic;
         padding-left: 30px;
+
+        @media(max-width: 500px) {
+            width: 80%;
+            margin-bottom: 0;
+        }
     }
 }

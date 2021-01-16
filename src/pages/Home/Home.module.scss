@@ -1,10 +1,31 @@
-.main {
-  height: 100vh;
-  width: 100%;
-  background-color: #020202;
-  color: #fff;
-  font-size: 5vmax;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+    width: 55%;
+    color: #FFF;
+    display: flex;
+	justify-content: flex-end;
+	margin-bottom: 100px;
+
+	@media(max-width: 500px) {
+		width: 90%;
+		margin-bottom: 0;
+	}
+    .text {
+        background-color: rgba(0, 0, 0, 0.193);
+        padding: 40px 20px;
+        border-radius: 10px;
+        .mainText {
+            font-family: 'Black Ops One', cursive;
+            font-size: 4em;
+            color: red;
+        }
+        .subText {
+            font-size: 2.2em;
+            line-height: 1em;
+		}
+		
+		.info {
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+    }
 }

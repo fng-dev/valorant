@@ -25,7 +25,7 @@ const Main: React.FC<IMain> = (props: any) => {
             <Logo />
             <Menu />
             <div className={classes.content}>
-                { children}
+                { children }
             </div>
         </div>
     );
