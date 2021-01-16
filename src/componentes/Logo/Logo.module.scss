@@ -1,0 +1,37 @@
+.container {
+    color: #FFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+    .content {
+        font-family: 'Black Ops One', cursive;
+        display: flex;
+        align-items: center;
+        width: 55%;
+        font-size: 3em;
+        margin: 0;
+        padding: 0;
+        .redname {
+            color: red;
+            font-size: 1.3em;
+            position: relative;
+        }
+    }
+
+    .subtitle {
+        display: flex;
+        align-items: center;
+        width: 55%;
+        font-size: 1.7em;
+        position: absolute;
+        top: 50px;
+        color: red;
+        font-weight: 500;
+        font-style: italic;
+        padding-left: 30px;
+    }
+}
