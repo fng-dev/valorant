@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import classes from './Main.module.scss';
 
 import TopMenu from '../../componentes/TopMenu'
+import Menu from '../../componentes/Menu'
 
 interface IMain {
 
@@ -20,7 +21,10 @@ const Main: React.FC<IMain> = (props: any) => {
         <div className={classes.container}>
             <div className={classes.effect} />
             <TopMenu />
-            { children}
+            <Menu />
+            <div className={classes.content}>
+                { children}
+            </div>
         </div>
     );
 }

@@ -1,0 +1,65 @@
+.container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    .menu {
+        width: 55%;
+        height: 60px;
+        border-radius: 5px;
+        background-image: url('../../assets/imgs/bg-slice-d.png');
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #FFF;
+        font-weight: 500;
+        background-position: 70%;
+        border-bottom: 4px solid rgb(169, 0, 0);
+
+        @media(max-width: 1700px) {
+            width: 80%;
+        }
+
+        
+
+        .item {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            padding: 0 40px;
+            
+            .buttonEffect {
+                position: absolute;
+                width: 100%;
+                height: 10%;
+                background-color: #000;
+                opacity: .0;
+                bottom: 0;
+                left: 0;
+                transition: opacity .23s, height .23s ease-out;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+
+            .content {
+                position: relative;
+            }
+            
+            svg {
+                margin: 0 3px;
+            }
+
+            @media(max-width: 1238px) {
+                display: none;
+            }
+        }
+        .item:hover > .buttonEffect {
+            opacity: .25;
+            height: 100%;
+        }
+    }
+}
